@@ -1,5 +1,20 @@
-GET http://127.0.0.1:8000/soma?a=5&b=6 HTTP/1.1
+### variáveis de ambiente
+@base_url = http://127.0.0.1:8000
 
-###
+### Teste de cnexão com a API
+GET {{base_url}}/ HTTP/1.1
+Accept: application/json
 
-GET http://127.0.0.1:8000/adicao/5/6 HTTP/1.1
+### Criação de uma série
+POST {{base_url}}/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "titulo": "sduhoaejs",
+    "descricao": "um monte de letras apenas para teste",
+    "ano_lancamento": 2064
+}
+
+### Obtenção de todas as series
+GET {{base_url}}/series HTTP/1.1
+Accept: application/json
