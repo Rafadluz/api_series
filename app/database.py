@@ -1,9 +1,11 @@
+from anyio import Path
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import  sessionmaker, declarative_base
 from os import getenv
 from dotenv import load_dotenv
 
-load_dotenv()
+# BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv()# BASE_DIR / ".env"
 
 # SERVER_URL = f"mysql+pymysql://{getenv('DB_USER')}:{getenv('DB_PSWD')}@{getenv('DB_HOST')}/{getenv('DB_NAME')}"
 

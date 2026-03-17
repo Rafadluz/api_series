@@ -18,3 +18,12 @@ Content-Type: application/json
 ### Obtenção de todas as series
 GET {{base_url}}/series HTTP/1.1
 Accept: application/json
+
+### Update de uma serie
+PUT {{base_url}}/serie/2 HTTP/1.1
+
+{
+    "titulo": "é issso",
+    "descricao": "é realmente só isso",
+    "ano": "213423"
+}
